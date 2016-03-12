@@ -33,7 +33,7 @@ class Account
 
 
   def total_transactions()
-    return list_transactions.inject { |sum, transactions | sum + transactions }
+    return @list_transactions.inject(0){ |sum, transactions | sum + transactions }
   end
 
 

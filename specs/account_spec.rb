@@ -59,10 +59,10 @@ class TestAccount < Minitest::Test
  end
 
  def test_total_transactions()
-  result = @accounts.list_transactions(transaction.value)
+  result = @accounts.total_transactions()
   assert_equal(30, result)
  end
-
+ 
  
 
 
