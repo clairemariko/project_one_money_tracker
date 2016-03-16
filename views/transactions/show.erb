@@ -1,0 +1,36 @@
+
+<form action="/transaction/<%= @transaction.id %>/edit" method="get">
+
+<h2><b>RECORD OF YOUR TRANSACTION</b></h2>
+<table>
+
+  <thead>
+    <th>Date</th>
+    <th>Merchant</th>
+    <th>Tag</th>
+    <th>Value</th>
+    
+  </thead>
+
+  <tbody>
+
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.transaction_date %></td>
+        <td><%= transaction.merchant.name %></td>
+        <td><%= transaction.tag.name %></td>
+        <td><%= transaction.value %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<a href="/transaction/<%= @transaction.id %>/edit">Edit Record</a>
+<input type="subit" value="Edit"
+
+<a href="/transaction/<%= @transaction.id %>/delete">DELETE record</a>
+<form action="/transaction/<%= @transaction.id %>/delete" method="post">
+
+<input type="submit" value="Delete">
+
+</form>

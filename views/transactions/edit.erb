@@ -1,0 +1,35 @@
+<div class="content">
+
+  <h2>Edit Record</h2>
+  <span class="card-title"><h1><center>Welcome</center></h1></span>
+    <h3><center>Edit Your Transaction Details Below</center></h3><br><br>
+
+  <form action="/transactions/<%= @transaction.id %>" method="post">
+  
+
+    <label for="date">Date:</label>
+    <input type="text" date="date" value= "<%= @transaction.transaction_date%>"><br>
+
+   <label for="merchant_id">Merchant:</label>
+   <select name="merchant_id">
+     <% @merchants.each do |merchant| %>
+       <option value="<%= merchant.id %>"><%= merchant.name %></option>
+     <% end %>
+   </select><br><br>
+
+   <label for="tag_id">Tag:</label>
+   <select name="tag_id">
+     <% @tags.each do |tag| %>
+       <option value="<%= tag.id %>"><%= tag.name %></option>
+     <% end %>
+   </select><br><br>
+
+   <label for="value">Value: </label>
+   <input type="number" name="value"><br><br>
+  
+
+
+    <input type='submit' value="Update Record">
+  </form>
+
+</div>

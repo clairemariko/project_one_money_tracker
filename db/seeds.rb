@@ -1,6 +1,6 @@
-require_relative('../modles/merchants')
-require_relative('../modles/tags')
-require_relative('../modles/transactions')
+require_relative('../models/merchant')
+require_relative('../models/tag')
+require_relative('../models/transaction')
 
 require('pry-byebug')
 
@@ -10,21 +10,42 @@ Transaction.delete_all
 
 
 merchant1 = Merchant.create({'name' => "asda"})
-merchant2 = Merchant.create({'name' => "tesco"})
-merchant3 = Merchant.create({'name' => "topshop"})
+merchant2 = Merchant.create({'name' => "h&m"})
+merchant3 = Merchant.create({'name' => "lovecrumbs"})
 
-tag1 = Tag({'name' => "food"})
-tag2 = Tag({'name' => "clothes"})
-tag3 = Tag({ 'name' => "topshop"})
+tag1 = Tag.create({'name' => "food"})
+tag2 = Tag.create({'name' => "clothes"})
+tag3 = Tag.create({'name' => "coffee"})
 
-transaction = Transaction.create({
-              'merchant_id' => merchant1.id,
-              'tag_id' => tag2.id,
-              'value' => 10
+transaction1 = Transaction.create({
+          'merchant_id' => merchant1.id,
+          'tag_id' => tag2.id,
+          'value' => 10,
+          'transaction_date' => '13 June 2015'
+            })
+
+transaction2 = Transaction.create({
+          'merchant_id' => merchant2.id,
+          'tag_id' => tag2.id,
+          'value' => 30,
+          'transaction_date' => '13 June 2015'
+          })
+
+transaction3 = Transaction.create({
+          'merchant_id' => merchant3.id,
+          'tag_id' => tag3.id,
+          'value' =>20,
+          'transaction_date' => '13 June 2015'
+          })
+nil
 
 
 
 
 
-  })
+
+
+
+
+
 

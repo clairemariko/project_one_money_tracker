@@ -4,7 +4,7 @@ class SqlRunner
 
   def self.execute( sql )
     begin
-      db = PG.connect({ dbname: 'rocket_league', host: 'localhost' })
+      db = PG.connect({ dbname: 'money_tracker', host: 'localhost' })
       result = db.exec( sql )
     ensure
       db.close

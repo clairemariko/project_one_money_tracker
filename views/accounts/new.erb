@@ -1,0 +1,23 @@
+<div>
+  
+
+  
+
+  <form action="/accounts" method="post">
+
+  <select name="tag_id">
+  <% @tags.each do |tag| %>
+    <option value="<%= tag.id %>"><%= tag.name %></option>
+  <% end %>
+  </select>
+  <select name="merchant_id">
+  <% @merchants.each do |merchant| %>
+    <option value="<%= merchant.id %>"><%= merchant.name %></option>
+  <% end %>
+  </select>
+  <input type="text" name="value">
+  <input type="date" name="date">
+    <input type='submit' value="My transaction">
+  </form>
+
+</div>

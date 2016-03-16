@@ -1,0 +1,53 @@
+<span class="card-title"><h1><center>Your Account</center></h1></span>
+
+
+<table>
+
+  <thead>
+    <th>Date</th>
+    <th>Tag</th>
+    <th>Merchant</th>
+    <th>Value</th>
+  </thead>
+
+
+<form method="get" action="/account">
+  
+  <label for="tag_id">Search by Tag:</label>
+  <select name="search">
+    <% @tags.each do |tag| %>
+      <option value="<%= tag.id %>"><%= tag.name %></option>
+    <% end %>
+  </select>
+  <button>search</button>
+</form>
+
+  <tbody>
+    <% @account.transactions.each do |transaction| %>
+      <tr>
+        
+        <td><br><%= transaction.transaction_date %></td>
+        <td><br><%= transaction.tag.name %></td>
+        <td><br><%= transaction.merchant.name %></td>
+        <td><br><%= transaction.value %></td>
+
+    
+
+
+    <td><form method="get" action="/transactions/<%=transaction.id %>/edit"> 
+        <input type="submit" name="transaction_edit" value="edit" >
+    </form></td>
+      <!-- <td><a href="/transactions/<%=transaction.id %>/edit">EDIT</a></td> -->
+      <td><form method="post" action="/transactions/<%=transaction.id %>/delete"> 
+          <input type="submit" name="transaction_delete" value="delete" >
+      </form></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfooter>
+    <tr><br><br>
+      <td>Total:</td>
+      <td><%= @account.total_transactions %></td>
+    </tr>
+  </tfooter>
+</table>

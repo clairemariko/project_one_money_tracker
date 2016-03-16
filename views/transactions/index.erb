@@ -1,0 +1,35 @@
+<div class="main-nav">
+  <ul class="nav">
+    <li class= "logo"> MY M£</li></div>
+    <li><a href ="/transactions/new" class="button button__blue">Home</a>
+    </li>
+    <li><a href="/transactions/new" class="button button__blue">Account</a>
+    </li>
+    
+  </ul>
+</div>
+
+<h1>Transactions</h1>
+
+<table>
+
+  <thead>
+    <th>Date</th>
+    <th>Merchant</th>
+    <th>Tag</th>
+    <th>Value</th>
+    
+  </thead>
+
+  <tbody>
+
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.transaction_date %></td>
+        <td><%= transaction.merchant.name %></td>
+        <td><%= transaction.tag.name %></td>
+        <td><%= transaction.value %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
