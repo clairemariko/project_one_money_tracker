@@ -15,7 +15,7 @@ header {
 .logo {
   
   list-style-type: none;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 30px;
   color: white;
   opacity: 1;
@@ -23,7 +23,7 @@ header {
 
 .nav-left {
   float: left;
-  line-height: 160px;
+  line-height: 150px;
 }
 
 .nav-right {
@@ -47,8 +47,9 @@ a {
 }
 
 body {
-  background-image: url("http://www.free-financial-advice.net/images/ways-to-save-money.jpg");
+  background-image: url("../images/ways-to-save-money.jpg");
   background-size: cover;
+
   }
 
 
@@ -64,6 +65,34 @@ body {
   color: white;
 }
 
+.box {
+
+margin-left: 43px;
+
+}
+
+.merchantbox{
+
+margin-left: 13px;
+
+}
+
+.tagbox{
+
+margin-left: 52px;
+
+}
+
+.column{
+
+padding-right: 15px;
+
+}
+
+.total{
+
+
+}
 
 
 
@@ -105,30 +134,26 @@ footer ul li {
   display: inline-block;
 }
 
-a.social {
-  display: inline-block;
-  text-indent: -9999px;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
+.social {
   opacity: .5;
-  transition: all .25s;
+  transition: all .55s;
 }
-a.codeclan {
-  background-image: url(./images/codeclan.jpg);
-}
-a.facebook {
-  background-image: url(./images/facebook.png);
-}
-a.github {
-  background-image: url(./images/github.png);
-}
-a.social:hover {
+
+.social:hover {
+  transform: scale(1, 1.2);
   opacity: 1;
 }
 .clearfix {
   clear: both;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links img {
+  border-radius: 50%;
+  max-width: 60px;
 }
 
 

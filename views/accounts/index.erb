@@ -26,10 +26,10 @@
     <% @account.transactions.each do |transaction| %>
       <tr>
         
-        <td><br><%= transaction.transaction_date %></td>
-        <td><br><%= transaction.tag.name %></td>
-        <td><br><%= transaction.merchant.name %></td>
-        <td><br><%= transaction.value %></td>
+        <td class="column"><br><%= transaction.transaction_date %></td>
+        <td class="column"><br><%= transaction.tag.name %></td>
+        <td class="column"><br><%= transaction.merchant.name %></td>
+        <td class="column"><br><%= transaction.value %></td>
 
     
 
@@ -45,7 +45,7 @@
     <% end %>
   </tbody>
   <tfooter>
-    <tr><br><br>
+    <tr>
       <td>Total:</td>
       <td><%= @account.total_transactions %></td>
     </tr>
