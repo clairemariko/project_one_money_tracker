@@ -1,7 +1,7 @@
 .main-nav {
   width: 100%;
   background-color: rgba(48, 56, 105, .9);
-  min-height: 160px;
+  min-height: 156px;
   text-align: center;
 
   
@@ -65,17 +65,16 @@ body {
   color: white;
 }
 
-.box {
+.datebox {
 
 margin-left: 43px;
-
 }
 
 
 
 .merchantbox{
 
-margin-left: 11px;
+margin-left: 13px;
 
 }
 
@@ -85,15 +84,32 @@ margin-left: 48px;
 
 }
 
+.valuebox{
+
+  margin-left: 34px;
+}
+
 .column{
 
 padding-right: 15px;
 
 }
 
+
+
+
+.totaltitle{
+  font-size: 25px;
+padding-top: 30px;
+padding-left: 45px;
+
+}
+
 .total{
-
-
+  font-size: 25px;
+ padding-top: 30px;
+ padding-left: 10px; 
+ text-align: center;
 }
 
 

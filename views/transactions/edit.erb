@@ -8,24 +8,24 @@
   
 
     <label for="date">Date:</label>
-    <input type="text" date="date" value= "<%= @transaction.transaction_date%>"><br>
+    <input class="datebox" type="text" date="date" value= "<%= @transaction.transaction_date%>"><br><br>
 
    <label for="merchant_id">Merchant:</label>
-   <select name="merchant_id">
+   <select class="merchantbox" name="merchant_id">
      <% @merchants.each do |merchant| %>
        <option value="<%= merchant.id %>"><%= merchant.name %></option>
      <% end %>
    </select><br><br>
 
    <label for="tag_id">Tag:</label>
-   <select name="tag_id">
+   <select class="tagbox" name="tag_id">
      <% @tags.each do |tag| %>
        <option value="<%= tag.id %>"><%= tag.name %></option>
      <% end %>
    </select><br><br>
 
    <label for="value">Value: </label>
-   <input type="number" name="value"><br><br>
+   <input class="valuebox"  type="number" name="value"><br><br><br>
   
 
 
